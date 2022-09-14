@@ -34,9 +34,9 @@ const TextForm = (props) => {
     <div className="container my-2">
       {/* textarea */}
       <h1>{props.heading}</h1>
-      <div class="mb-3">
+      <div className="mb-3">
         <textarea
-          class="form-control"
+          className="form-control"
           id="myBox"
           rows="8"
           value={text}
