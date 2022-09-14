@@ -8,7 +8,7 @@ const App = () => {
     <>
       <Navbar title="TextUtils" />
       <TextForm heading="Test Your Text" />
-      <About />
+      <About aboutText="About Us" />
     </>
   );
 };
