@@ -25,7 +25,7 @@ const App = () => {
         mode={mode}
         toggleMode={toggleMode}
       />
-      <TextForm heading="Test Your Text" />
+      <TextForm heading="Test Your Text" mode={mode} />
       <About aboutText="About Us" />
     </>
   );
