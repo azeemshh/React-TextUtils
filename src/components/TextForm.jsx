@@ -9,25 +9,30 @@ const TextForm = (props) => {
 
   function handleUpperCase() {
     setText(text.toUpperCase());
+    props.showAlert("Converted to UpperCase!", "success");
   }
 
   function handleLowerCase() {
     setText(text.toLowerCase());
+    props.showAlert("Converted to LowerCase!", "success");
   }
-
+  
   function handleCopyText(event) {
     var text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Copied to clipboard!", "success");
   }
-
+  
   function handleTrimText() {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Text trimmed!", "success");
   }
-
+  
   function handleClearText() {
     setText("");
+    props.showAlert("Text cleared!", "success");
   }
 
   return (
@@ -45,7 +50,7 @@ const TextForm = (props) => {
           value={text}
           onChange={handleTextChange}
           style={{
-            color: props.mode === "dark" ? "white" : "black",
+            color: props.mode === "dark" ? "white" : "black  ",
             backgroundColor: props.mode === "dark" ? "#222" : "white",
             border: "1px solid #aff000",
           }}
