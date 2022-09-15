@@ -46,14 +46,15 @@ const TextForm = (props) => {
           onChange={handleTextChange}
           style={{
             color: props.mode === "dark" ? "white" : "black",
-            backgroundColor: props.mode === "dark" ? "black" : "white",
+            backgroundColor: props.mode === "dark" ? "#222" : "white",
+            border: "1px solid #aff000",
           }}
         ></textarea>
       </div>
 
       {/* buttons */}
       <div className="container my-3">
-        <button className="btn btn-primary mx-2" onClick={handleUpperCase}>
+        <button className="btn btn-primary mx-2 " onClick={handleUpperCase}>
           UpperCase
         </button>
         <button className="btn btn-primary mx-2" onClick={handleLowerCase}>

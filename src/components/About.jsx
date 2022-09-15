@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const About = (props) => {
   // const [myStyle, setMyStyle] = useState({
@@ -28,11 +28,18 @@ const About = (props) => {
     <>
       <div
         className="container my-2"
-        style={{ color: props.mode === "dark" ? "white" : "black" }}
+        style={{
+          color: props.mode === "dark" ? "white" : "black",
+        }}
       >
         <h1>{props.aboutText}</h1>
       </div>
-      <div className="container my-1 p-0">
+      <div
+        className="container my-1 p-0"
+        style={{
+          color: props.mode === "dark" ? "white" : "black",
+        }}
+      >
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingOne">
@@ -61,7 +68,7 @@ const About = (props) => {
                 className="accordion-body"
                 style={{
                   color: props.mode === "dark" ? "white" : "black",
-                  backgroundColor: props.mode === "dark" ? "black" : "white",
+                  backgroundColor: props.mode === "dark" ? "#222" : "white",
                 }}
               >
                 <strong>This is the first item's accordion body.</strong> It is
@@ -103,7 +110,7 @@ const About = (props) => {
                 className="accordion-body"
                 style={{
                   color: props.mode === "dark" ? "white" : "black",
-                  backgroundColor: props.mode === "dark" ? "black" : "white",
+                  backgroundColor: props.mode === "dark" ? "#222" : "white",
                 }}
               >
                 <strong>This is the second item's accordion body.</strong> It is
@@ -145,7 +152,7 @@ const About = (props) => {
                 className="accordion-body"
                 style={{
                   color: props.mode === "dark" ? "white" : "black",
-                  backgroundColor: props.mode === "dark" ? "black" : "white",
+                  backgroundColor: props.mode === "dark" ? "#222" : "white",
                 }}
               >
                 <strong>This is the third item's accordion body.</strong> It is
