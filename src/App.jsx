@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Root from "./components/Root";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Root from "./components/Root";
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -36,42 +36,37 @@ const App = () => {
 
   return (
     <>
-      <Router>
-        <Navbar
-          title="TextUtils"
-          home="Home"
-          about="About"
-          mode={mode}
-          toggleMode={toggleMode}
-        />
+      {/* <Router> */}
+      <Navbar
+        title="TextUtils"
+        home="Home"
+        about="About"
+        mode={mode}
+        toggleMode={toggleMode}
+      />
+      <Alert alert={alert} />
 
-        <Alert alert={alert} />
-
-        <div className="container">
-          <Routes>
+      <div className="container">
+        {/* <Routes>
             // Root Route
             <Route exact path="/" element={<Root mode={mode} />}></Route>
             // Home Route
             <Route
               exact
               path="/home"
-              element={
-                <TextForm
-                  showAlert={showAlert}
-                  heading="Test Your Text"
-                  mode={mode}
-                />
-              }
-            ></Route>
-            // About Route
-            <Route
+              element={  */}
+        <TextForm showAlert={showAlert} heading="Test Your Text" mode={mode} />
+        {/* }
+            ></Route> */}
+
+        {/* <Route
               exact
               path="/about"
               element={<About aboutText="About Us" mode={mode} />}
-            ></Route>
-          </Routes>
-        </div>
-      </Router>
+            ></Route> */}
+        {/* </Routes> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 };
